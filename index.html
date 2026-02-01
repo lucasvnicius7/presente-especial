@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Um Pedido Especial 💖</title>
+<title>Be My Valentine 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: Arial, sans-serif;
 background: linear-gradient(135deg, #ff4d6d, #ff758f);
 height: 100vh;
 display: flex;
@@ -15,61 +15,75 @@ align-items: center;
 margin: 0;
 color: white;
 text-align: center;
-overflow: hidden; /* Evita barras de rolagem quando o botão foge */
 }
 .card {
-background: rgba(255, 255, 255, 0.15); /* Um pouco mais claro */
-backdrop-filter: blur(10px); /* Efeito de vidro */
-padding: 40px;
+background: rgba(0,0,0,0.2);
+padding: 30px;
 border-radius: 20px;
 max-width: 320px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-border: 1px solid rgba(255,255,255,0.2);
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-h1 { font-size: 28px; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-p { font-size: 18px; margin-bottom: 30px; line-height: 1.5; }
+h1 {
+font-size: 26px;
+margin-bottom: 10px;
+}
+p {
+font-size: 16px;
+margin-bottom: 25px;
+}
 button {
-font-size: 18px;
-padding: 12px 30px;
+font-size: 16px;
+padding: 10px 20px;
 border: none;
-border-radius: 50px;
+border-radius: 30px;
 cursor: pointer;
 margin: 10px;
-transition: transform 0.2s;
-font-weight: bold;
 }
-button:active { transform: scale(0.95); }
-#yes { background: #2ecc71; color: white; box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4); }
-#no { background: #e74c3c; color: white; position: absolute; box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4); }
+#yes {
+background: #2ecc71;
+color: white;
+}
+#no {
+background: #e74c3c;
+color: white;
+position: absolute;
+}
 </style>
 </head>
 <body>
 <div class="card">
 <h1>Oi, Mah 💕</h1>
 <p>
-Do fundo do meu coração para essa tela...<br>
-<b>Quer sair comigo? 🌹</b>
+Do meu coração para essa tela…<br>
+Você quer sair comigo? 🌹
 </p>
 <button id="yes" onclick="sayYes()">Sim 💖</button>
-<button id="no" onmouseover="moveNo()" onclick="moveNo()">Não 😅</button>
+<button id="no" onmouseover="moveNo()">Não 😅</button>
 </div>
 <script>
 function sayYes() {
 document.body.innerHTML = `
-<div style="height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:linear-gradient(135deg,#ff4d6d,#ff758f);color:white;font-family:sans-serif;text-align:center;">
-<h1 style="font-size:3rem;">AEEE!!! EBAAAA 💘🎉</h1>
-<p style="font-size:1.5rem;">Você me fez a pessoa mais feliz do mundo! 🥹❤️</p>
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,#ff4d6d,#ff758f);
+color:white;
+font-family:Arial;
+text-align:center;">
+<h1>EBAAAAAA 💘🎉</h1>
+<p>Você me fez a pessoa mais feliz do mundo 🥹❤️</p>
 </div>
 `;
 }
 function moveNo() {
 const button = document.getElementById("no");
-const width = window.innerWidth;
-const height = window.innerHeight;
-const newX = Math.random() * (width - 150);
-const newY = Math.random() * (height - 100);
-button.style.left = newX + "px";
-button.style.top = newY + "px";
+const x = Math.random() * (window.innerWidth - 100);
+const y = Math.random() * (window.innerHeight - 50);
+button.style.left = x + "px";
+button.style.top = y + "px";
 }
 </script>
 </body>
